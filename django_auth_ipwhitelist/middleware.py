@@ -4,7 +4,7 @@ from django_auth_ipwhitelist.models import AuthIPWhitelist
 from django_auth_ipwhitelist.settings import auth_ip_whitelist_settings
 
 
-class AuthIPWhitelistMiddleware:
+class IPWhitelistMiddleware:
     """
     Middleware to whitelist IP addresses for authentication in Django.
 
