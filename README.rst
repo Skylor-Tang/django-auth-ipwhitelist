@@ -16,6 +16,7 @@ Installation
 ------------
 
 Install useing pip:
+
     .. code-block:: bash
 
         pip install django-auth-ipwhitelist
@@ -24,6 +25,7 @@ Configuration
 -------------
 
 Add `django_auth_ipwhitelist` to your `INSTALLED_APPS` setting like this:
+
     .. code-block:: python
 
         INSTALLED_APPS = [
@@ -32,6 +34,7 @@ Add `django_auth_ipwhitelist` to your `INSTALLED_APPS` setting like this:
         ]
 
 Add `django_auth_ipwhitelist.middleware.AuthIPWhitelistMiddleware` to your `MIDDLEWARE` setting like this:
+
     .. code-block:: python
 
         MIDDLEWARE = [
@@ -40,6 +43,7 @@ Add `django_auth_ipwhitelist.middleware.AuthIPWhitelistMiddleware` to your `MIDD
         ]
 
 Add `django_auth_ipwhitelist` to your `AUTHENTICATION_BACKENDS` setting like this:
+
     .. code-block:: python
 
         AUTHENTICATION_BACKENDS = [
@@ -48,11 +52,13 @@ Add `django_auth_ipwhitelist` to your `AUTHENTICATION_BACKENDS` setting like thi
         ]
 
 Create `authipwhitelist` database tables by running the following command:
+
     .. code-block:: bash
 
         python manage.py migrate django_auth_ipwhitelist
 
 If you need to add default IP addresses to the whitelist, for example, for logging into the Django admin using the default address, you can achieve this by the following settings in settings.py. By default, `127.0.0.1` is already set as default whitelist addresses.
+
     .. code-block:: python
 
         AUTH_IP_WHITELIST = {
@@ -71,6 +77,7 @@ Integration with djangorestframework-simplejwt
 ----------------------------------------------
 
 This module allows seamless integration of django-auth-ipwhitelist with drf-simplejwt, enabling authentication based on IP whitelist directly through the JWT token, in addition to the traditional username/password mode. Here's how to set it up:
+
     .. code-block:: python
 
         # settings.py
