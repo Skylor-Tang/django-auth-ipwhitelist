@@ -4,7 +4,6 @@ from django.test.signals import setting_changed
 
 DEFAULTS = {
     'ALLOWED_WHITELISTED_HOSTS': [
-        'localhost',
         '127.0.0.1',
     ],
 }

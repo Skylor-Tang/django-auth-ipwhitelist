@@ -52,12 +52,11 @@ Create `authipwhitelist` database tables by running the following command:
 
         python manage.py migrate django_auth_ipwhitelist
 
-If you need to add default IP addresses to the whitelist, for example, for logging into the Django admin using the default address, you can achieve this by the following settings in settings.py. By default, `127.0.0.1` and `localhost` are already set as default whitelist addresses.
+If you need to add default IP addresses to the whitelist, for example, for logging into the Django admin using the default address, you can achieve this by the following settings in settings.py. By default, `127.0.0.1` is already set as default whitelist addresses.
     .. code-block:: python
 
         AUTH_IP_WHITELIST = {
             'ALLOWED_WHITELISTED_HOSTS': [
-                'localhost',
                 '127.0.0.1',
             ],
         }
